@@ -1,0 +1,61 @@
+{
+    "answerArea": {
+        "calculator": false,
+        "options": {
+            "content": "",
+            "images": {},
+            "widgets": {}
+        },
+        "type": "multiple"
+    },
+    "hints": [
+        {
+            "content": "Let's substitute $\\blue{9}$ for $\\blue z$.",
+            "images": {},
+            "widgets": {}
+        },
+        {
+            "content": "$\\phantom{=}3{\\blue z}$\n\n$= 3({\\blue{9}})$\n",
+            "images": {},
+            "widgets": {}
+        },
+        {
+            "content": "$=27$",
+            "images": {},
+            "widgets": {}
+        }
+    ],
+    "itemDataVersion": {
+        "major": 0,
+        "minor": 1
+    },
+    "question": {
+        "content": "**Evaluate $3z$ when $z=9$.**\n\n[[☃ numeric-input 1]]",
+        "images": {},
+        "widgets": {
+            "numeric-input 1": {
+                "graded": true,
+                "options": {
+                    "answers": [
+                        {
+                            "maxError": null,
+                            "message": "",
+                            "simplify": "required",
+                            "status": "correct",
+                            "strict": false,
+                            "value": 27
+                        }
+                    ],
+                    "coefficient": false,
+                    "labelText": "",
+                    "size": "normal"
+                },
+                "type": "numeric-input",
+                "version": {
+                    "major": 0,
+                    "minor": 0
+                }
+            }
+        }
+    }
+}

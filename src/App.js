@@ -6,60 +6,16 @@ import "../src/lib/khan-exercises.css";
 import "../src/lib/perseus.css";
 
 import QuestionRenderer from "./QuestionRenderer";
+import AnswerRenderer from "./AnswerRenderer";
 
-const itemData = {
-  question: {
-    content: "This is a *sample question* ^_^\n\n[[☃ grapher 1]]",
-    images: {},
-    widgets: {
-      "grapher 1": {
-        type: "grapher",
-        alignment: "default",
-        static: false,
-        graded: true,
-        options: {
-          correct: {
-            type: "linear",
-            coords: null,
-          },
-          availableTypes: ["linear"],
-          graph: {
-            labels: ["x", "y"],
-            range: [
-              [-10, 10],
-              [-10, 10],
-            ],
-            step: [1, 1],
-            backgroundImage: {
-              url: null,
-            },
-            markings: "graph",
-            rulerLabel: "",
-            rulerTicks: 10,
-            valid: true,
-            showTooltips: false,
-          },
-        },
-        version: {
-          major: 0,
-          minor: 0,
-        },
-      },
-    },
-  },
-  answerArea: {
-    calculator: false,
-    chi2Table: false,
-    periodicTable: false,
-    tTable: false,
-    zTable: false,
-  },
-  itemDataVersion: {
-    major: 0,
-    minor: 1,
-  },
-  hints: [],
-};
+
+
+let q = require('./extract/temp.json')
+let problem_metadata = q.problem_metadata ? q.problem_metadata : null;
+
+// let q = require('./extract/15a5e762860f5ed686967e52e0fd6335.json')
+// let q = require('./extract/f4d080b290395c39b21950220192d192.json')
+
 
 const styles = {
   container: {
@@ -75,8 +31,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div style={styles.container}>
-          <QuestionRenderer question={itemData} />
+        <div style={styles.container}>        
+          <AnswerRenderer question={problem_metadata} readOnly={true} />
         </div>
       </div>
     );
